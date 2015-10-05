@@ -36,4 +36,17 @@ dependencies {
     // kotlin
     compile 'org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion'
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+buildscript {
+    ext.kotlin_version = '0.14.449'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+repositories {
+    mavenCentral()
 }
