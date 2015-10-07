@@ -19,7 +19,7 @@ class ForecastAdapter(data: List<Forecast>) : RecyclerView.Adapter<ForecastAdapt
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): ViewHolder? {
         var view: View = LayoutInflater
-                .from(parent!!.context)
+                .from(parent?.context)
                 .inflate(R.layout.forecast_item, parent, false)
 
         return ViewHolder(view)
