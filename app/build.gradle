@@ -38,7 +38,7 @@ dependencies {
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-
+    // retrofit
     compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
 
     // Rx FTW

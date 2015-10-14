@@ -1,4 +1,4 @@
-package br.com.gilson.adapter
+package br.com.gilson.view.adapter
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
