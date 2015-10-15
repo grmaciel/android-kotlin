@@ -26,7 +26,8 @@ android {
     }
 }
 
-def appcompatVersion="23.0.1"
+def appcompatVersion = "23.0.1"
+def retrofitVersion = "2.0.0-beta2"
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -38,8 +39,12 @@ dependencies {
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-
-    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    // retrofit
+    compile 'com.google.code.gson:gson:2.3'
+    compile "com.squareup.retrofit:retrofit:$retrofitVersion"
+    compile "com.squareup.retrofit:adapter-rxjava:$retrofitVersion"
+    compile "com.squareup.retrofit:converter-gson:$retrofitVersion"
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
 
     // Rx FTW
     compile 'io.reactivex:rxandroid:1.0.1'
