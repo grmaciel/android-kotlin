@@ -9,12 +9,8 @@ import rx.schedulers.Schedulers
  * Created by Gilson Maciel on 06/10/2015.
  */
 class WeatherRepository(val weatherService: WeatherRest) {
-
-
-
-    public fun getForecast(dayCount: Int, city: String): Observable<ForecastDto> {
-        return weatherService.weatherForecast(dayCount, city)
+    public fun getForecast(city: String): Observable<ForecastDto> {
+        return weatherService.weatherForecast(city)
                 .subscribeOn(Schedulers.newThread())
-                .flatMap { Observable.from(it) }
     }
 }
