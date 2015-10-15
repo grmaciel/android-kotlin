@@ -35,7 +35,7 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$appcompatVersion"
 
     // kotlin
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
