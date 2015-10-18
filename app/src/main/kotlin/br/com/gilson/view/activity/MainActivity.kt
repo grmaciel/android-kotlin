@@ -10,6 +10,7 @@ import br.com.gilson.model.Forecast
 import br.com.gilson.view.adapter.ForecastAdapter
 import butterknife.bindView
 import rx.android.schedulers.AndroidSchedulers
+import java.util.*
 import javax.inject.Inject
 
 
@@ -39,8 +40,11 @@ class MainActivity : BaseActivity() {
                         { error -> Log.e("Error", error.toString()) })
     }
 
-    private fun renderAdapterData(adapterData: List<Forecast>) {
-        forecast.adapter = ForecastAdapter(adapterData);
+    private fun renderAdapterData(adapterData: Forecast) {
+        // for now only
+        var array = ArrayList<Forecast>()
+        array.add(adapterData)
+        forecast.adapter = ForecastAdapter(array);
         forecast.layoutManager = LinearLayoutManager(this)
     }
 }
