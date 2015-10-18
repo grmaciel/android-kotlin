@@ -3,29 +3,29 @@ package br.com.gilson.data.ws.dto
 /**
  * Created by Gilson Maciel on 06/10/2015.
  */
-data class ForecastDto {
-    public var city: CityDto? = null
-    public var list: List<ForecastDetailDto>? = null
+data class ForecastDto(city: CityDto, list: List<ForecastDetailDto>) {
+    public var city: CityDto = city
+    public var list: List<ForecastDetailDto> = list
 }
 
-class CityDto {
-    public var name: String? = null
+class CityDto(name: String) {
+    public var name: String = name;
 }
 
-class ForecastDetailDto {
-    public var dt: Long? = null
-    public var main: TemperatureDto? = null
-    public var weather: List<WeatherDto>? = null
+class ForecastDetailDto(dt: Long, main: TemperatureDto, weather: List<WeatherDto>) {
+    public var dt: Long = dt
+    public var main: TemperatureDto = main
+    public var weather: List<WeatherDto> = weather
 
 }
 
-class WeatherDto {
-    public var main: String? = null
-    public var description: String? = null
+class WeatherDto(main: String, descripton: String) {
+    public var main: String = main
+    public var description: String = descripton
 }
 
-class TemperatureDto {
-    public var temp: Float? = null
-    public var temp_min: Float? = null
-    public var temp_max: Float? = null
+class TemperatureDto(temp: Float, temp_min: Float, temp_max: Float) {
+    public var temp: Float = temp
+    public var temp_min: Float = temp_min
+    public var temp_max: Float = temp_max
 }
