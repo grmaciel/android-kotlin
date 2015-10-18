@@ -6,13 +6,10 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import br.com.gilson.R
 import br.com.gilson.data.repository.WeatherRepository
-import br.com.gilson.data.ws.dto.ForecastDto
 import br.com.gilson.model.Forecast
-import br.com.gilson.model.Temperature
 import br.com.gilson.view.adapter.ForecastAdapter
 import butterknife.bindView
 import rx.android.schedulers.AndroidSchedulers
-import java.util.*
 import javax.inject.Inject
 
 
