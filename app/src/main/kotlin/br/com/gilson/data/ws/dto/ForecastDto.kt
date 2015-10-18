@@ -12,9 +12,9 @@ class CityDto(name: String) {
     public var name: String = name;
 }
 
-class ForecastDetailDto(dt: Long, main: TemperatureDto, weather: List<WeatherDto>) {
+class ForecastDetailDto(dt: Long, temp: TemperatureDto, weather: List<WeatherDto>) {
     public var dt: Long = dt
-    public var main: TemperatureDto = main
+    public var temp: TemperatureDto = temp
     public var weather: List<WeatherDto> = weather
 
 }
@@ -24,8 +24,8 @@ class WeatherDto(main: String, descripton: String) {
     public var description: String = descripton
 }
 
-class TemperatureDto(temp: Float, temp_min: Float, temp_max: Float) {
-    public var temp: Float = temp
-    public var temp_min: Float = temp_min
-    public var temp_max: Float = temp_max
+class TemperatureDto(day: Float, min: Float, max: Float) {
+    public var day: Float = day
+    public var min: Float = min
+    public var max: Float = max
 }

@@ -24,10 +24,10 @@ class WeatherRepository(val weatherService: WeatherRest) {
 
     private fun extractWeatherFromDto(dto: ForecastDto): List<Weather> {
         return dto.list.map { detail ->
-            val main = detail.main
-            Weather(Date(detail.dt), main.temp,
-                    main.temp_min,
-                    main.temp_max,
+            val temp = detail.temp
+            Weather(Date(detail.dt*1000), temp.day,
+                    temp.min,
+                    temp.max,
                     detail.weather.get(0).description)
         }
     }

@@ -14,7 +14,7 @@ class Forecast(city: String, temperature: List<Weather>) {
 class Weather(date: Date,  current: Float, min: Float, max: Float,description: String) {
     public val date: Date = date
     public val min: Float = min
-    public val max: Float = min
-    public val current: Float = min
+    public val max: Float = max
+    public val current: Float = current
     public val description: String = description
 }
