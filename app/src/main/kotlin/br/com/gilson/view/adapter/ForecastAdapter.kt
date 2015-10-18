@@ -28,12 +28,12 @@ class ForecastAdapter(data: List<Forecast>) : RecyclerView.Adapter<ForecastAdapt
     }
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.txtTemp?.text = "${data.get(position).temp.current} ºC";
-        holder?.txtCity?.text = data.get(position).city;
+//        holder?.txtTemp?.text = "${data.get(position).temp.current} ºC";
+//        holder?.txtCity?.text = data.get(position).city;
     }
 
     inner class ViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
         val txtCity: TextView by bindView(R.id.txtCity)
-        val txtTemp: TextView by bindView(R.id.txtTemperature)
+        val txtTemp: TextView by bindView(R.id.txtTempToday)
     }
 }

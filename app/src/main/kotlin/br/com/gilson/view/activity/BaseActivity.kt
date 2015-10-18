@@ -9,7 +9,7 @@ import br.com.gilson.di.component.ApplicationComponent
  */
 public abstract class BaseActivity : AppCompatActivity() {
     public fun applicationComponent(): ApplicationComponent {
-        return (getApplication() as AndroidApplication)
+        return (application as AndroidApplication)
                 .getApplicationComponent()
     }
 }
