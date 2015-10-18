@@ -1,4 +1,8 @@
 # android-kotlin
-An android project using Kotlin 
+An android project for Wather Forecast using Kotlin 
 
-Self study, still deciding on the technologies to use :)
+Technologies so far:
+* KotterKnife
+* Retrofit 2
+* Dagger 2
+* RxJava
