@@ -3,7 +3,7 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    buildToolsVersion "23.0.1"
 
     defaultConfig {
         applicationId "br.com.gilson"
@@ -33,9 +33,10 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "com.android.support:appcompat-v7:$appcompatVersion"
     compile "com.android.support:recyclerview-v7:$appcompatVersion"
+    compile "com.android.support:cardview-v7:$appcompatVersion"
 
     // kotlin
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
     compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
@@ -46,10 +47,20 @@ dependencies {
     compile "com.squareup.retrofit:converter-gson:$retrofitVersion"
     compile 'com.squareup.okhttp:okhttp:2.4.0'
 
+    //Dagger 2
+    compile 'com.google.dagger:dagger:2.0.1'
+    kapt 'com.google.dagger:dagger-compiler:2.0.1'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
     // Rx FTW
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'io.reactivex:rxjava:1.0.14'
 }
+
+kapt {
+    generateStubs = true
+}
+
 buildscript {
     ext.kotlin_version = '0.14.449'
     repositories {
